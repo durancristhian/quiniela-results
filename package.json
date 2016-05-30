@@ -1,0 +1,50 @@
+{
+  "name": "quiniela-results",
+  "version": "1.0.0",
+  "description": "quiniela-results is a module to obtain the results of the argentinian lotery from a given date",
+  "main": "src/index.js",
+  "scripts": {
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "commit": "git cz",
+    "coverage": "istanbul cover -x src/**/*.test.js tape src/**/*.test.js",
+    "start": "node src/index",
+    "test": "standard --verbose | snazzy && node src/index.test.js | tap-spec"
+  },
+  "dependencies": {
+    "cheerio": "0.20.0",
+    "request": "2.72.0"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "1.1.6",
+    "ghooks": "1.2.1",
+    "istanbul": "0.4.3",
+    "snazzy": "4.0.0",
+    "standard": "7.1.1",
+    "tap-spec": "4.1.1",
+    "tape": "4.5.1"
+  },
+  "engines": {
+    "node": "6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/durancristhian/quiniela-results.git"
+  },
+  "bugs": {
+    "url": "https://github.com/durancristhian/quiniela-results/issues"
+  },
+  "keywords": [
+    "quiniela",
+    "argentina"
+  ],
+  "author": "Cristhian Javier Duran <durancristhian@gmail.com> (https://github.com/durancristhian)",
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm test && npm run coverage && npm run check-coverage"
+    }
+  }
+}
