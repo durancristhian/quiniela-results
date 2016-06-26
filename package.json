@@ -1,27 +1,34 @@
 {
   "name": "quiniela-results",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "quiniela-results is a module to obtain the results of the argentinian lotery from a given date",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "check-coverage": "istanbul check-coverage --statements 50 --branches 50 --functions 50 --lines 50",
+    "check-vulnerable-dependencies": "nsp check",
     "commit": "git cz",
-    "coverage": "istanbul cover -x src/**/*.test.js tape src/**/*.test.js",
-    "start": "node src/index",
-    "test": "standard --verbose | snazzy && node src/index.test.js | tap-spec"
+    "coverage": "istanbul cover -x test/**/*.test.js tape test/**/*.test.js",
+    "lint": "standard | snazzy",
+    "test": "tape test/**/*.test.js | tap-spec"
+  },
+  "bin": {
+    "quiniela-results": "./bin/cli.js"
   },
   "dependencies": {
-    "cheerio": "0.20.0",
-    "request": "2.72.0"
+    "cheerio": "^0.20.0",
+    "commander": "^2.9.0",
+    "request": "^2.72.0",
+    "validator": "5.4.0"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "1.1.6",
-    "ghooks": "1.2.1",
-    "istanbul": "0.4.3",
-    "snazzy": "4.0.0",
-    "standard": "7.1.1",
-    "tap-spec": "4.1.1",
-    "tape": "4.5.1"
+    "cz-conventional-changelog": "^1.1.6",
+    "ghooks": "^1.2.1",
+    "istanbul": "^0.4.3",
+    "nsp": "^2.5.0",
+    "snazzy": "^4.0.0",
+    "standard": "^7.1.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.5.1"
   },
   "engines": {
     "node": "6"
@@ -44,7 +51,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     },
     "ghooks": {
-      "pre-commit": "npm test && npm run coverage && npm run check-coverage"
+      "pre-commit": "npm run check-vulnerable-dependencies && npm run lint && npm test && npm run coverage && npm run check-coverage"
     }
   }
 }
