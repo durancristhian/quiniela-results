@@ -4,7 +4,7 @@
   "description": "quiniela-results is a module to obtain the results of the argentinian lotery from a given date",
   "main": "lib/index.js",
   "scripts": {
-    "check-coverage": "istanbul check-coverage --statements 50 --branches 50 --functions 50 --lines 50",
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "check-vulnerable-dependencies": "nsp check",
     "commit": "git cz",
     "coverage": "istanbul cover -x test/**/*.test.js tape test/**/*.test.js",
@@ -24,6 +24,7 @@
     "cz-conventional-changelog": "^1.1.6",
     "ghooks": "^1.2.1",
     "istanbul": "^0.4.3",
+    "nock": "^8.0.0",
     "nsp": "^2.5.0",
     "snazzy": "^4.0.0",
     "standard": "^7.1.1",
