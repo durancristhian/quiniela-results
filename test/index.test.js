@@ -8,7 +8,7 @@ test('check results', (assert) => {
   getResults(today)
     .then(results => {
       assert.equal(Array.isArray(results), true, 'results should be an array')
-      results.forEach(i => assert.equal(typeof i, 'object', 'every item in results should be an object'))
+      results.every(i => assert.ok(typeof i === 'object', 'every item in results should be an object'))
       assert.end()
     })
 })
