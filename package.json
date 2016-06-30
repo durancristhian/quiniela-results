@@ -1,6 +1,6 @@
 {
   "name": "quiniela-results",
-  "version": "0.0.1",
+  "version": "0.0.0-semantically-released",
   "description": "quiniela-results is a module to obtain the results of the argentinian lotery from a given date",
   "main": "lib/index.js",
   "scripts": {
