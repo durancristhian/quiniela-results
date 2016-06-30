@@ -10,7 +10,8 @@
     "coverage": "istanbul cover -x test/**/*.test.js tape test/**/*.test.js",
     "dependency-check": "dependency-check ./package.json",
     "lint": "standard | snazzy",
-    "test": "tape test/**/*.test.js | tap-spec"
+    "test": "tape test/**/*.test.js | tap-spec",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "bin": {
     "quiniela-results": "./bin/cli.js"
@@ -31,7 +32,8 @@
     "snazzy": "^4.0.0",
     "standard": "^7.1.1",
     "tap-spec": "^4.1.1",
-    "tape": "^4.5.1"
+    "tape": "^4.5.1",
+    "semantic-release": "^4.3.5"
   },
   "engines": {
     "node": "6"
