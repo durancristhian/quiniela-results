@@ -10,17 +10,19 @@
     "coverage": "istanbul cover -x test/**/*.test.js tape test/**/*.test.js",
     "dependency-check": "dependency-check ./package.json",
     "lint": "standard | snazzy",
-    "test": "tape test/**/*.test.js | tap-spec",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "tape test/**/*.test.js | tap-spec"
   },
   "bin": {
     "quiniela-results": "./bin/cli.js"
   },
   "dependencies": {
     "cheerio": "^0.20.0",
+    "codecov": "^1.0.1",
     "commander": "^2.9.0",
     "request": "^2.72.0",
-    "validator": "5.4.0"
+    "validator": "^5.4.0"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^1.1.6",
@@ -56,7 +58,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     },
     "ghooks": {
-      "pre-commit": "npm run dependency-check && npm run check-vulnerable-dependencies && npm run lint && npm test && npm run coverage && npm run check-coverage"
+      "pre-commit": "npm run check-vulnerable-dependencies && npm run dependency-check && npm run lint && npm test && npm run coverage && npm run check-coverage"
     }
   }
 }
