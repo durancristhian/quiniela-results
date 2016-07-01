@@ -9,14 +9,16 @@ before_install:
   - npm i -g npm@^2.0.0
 before_script:
   - npm prune
+after_success:
   - npm run check-vulnerable-dependencies
   - npm run dependency-check
   - npm run lint
   - npm test
   - npm run coverage
   - npm run check-coverage
-after_success:
   - npm run report-coverage
+  - npm run build
+  - npm run umd
   - npm run semantic-release
 branches:
   except:

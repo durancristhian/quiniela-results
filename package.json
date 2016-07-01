@@ -11,7 +11,6 @@
     "coverage": "istanbul cover -x test/**/*.test.js tape test/**/*.test.js",
     "dependency-check": "dependency-check ./package.json",
     "lint": "standard | snazzy",
-    "prepublish": "npm run build && npm run umd",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "tape test/**/*.test.js | tap-spec",
