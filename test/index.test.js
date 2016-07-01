@@ -23,7 +23,7 @@ test('check invalid date parameter', (assert) => {
     })
 })
 
-test('check errors', (assert) => {
+test('check 404 network error', (assert) => {
   let today = (new Date()).toISOString().substring(0, 10)
 
   nock('http://www.dejugadas.com/quinielas/datospizarra.php')
