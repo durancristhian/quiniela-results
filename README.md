@@ -12,7 +12,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?maxAge=2592000)](http://makeapullrequest.com)
 [![license](https://img.shields.io/github/license/durancristhian/quiniela-results.svg)](https://github.com/durancristhian/quiniela-results/blob/master/LICENSE)
 
-Module to obtain the results of the argentinian lotery from a given date. It can be executed as a CLI or consumed as any other npm module (including client-side implementations).
+Module to obtain the results of the argentinian lotery from a given date. It can be executed as a CLI or consumed as any other npm module.
 
 ## Demo
 
@@ -33,7 +33,7 @@ npm install quiniela-results
 quiniela-results --date '2016-06-30'
 ```
 
-* As any other npm module (including client-side implementations):
+* As any other npm module:
 
 ```javascript
 const getResults = require('quiniela-results')

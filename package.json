@@ -1,7 +1,7 @@
 {
   "name": "quiniela-results",
   "version": "0.0.0-semantically-released",
-  "description": "Module to obtain the results of the argentinian lotery from a given date. It can be executed as a CLI or consumed as any other npm module (including client-side implementations).",
+  "description": "Module to obtain the results of the argentinian lotery from a given date. It can be executed as a CLI or consumed as any other npm module.",
   "main": "lib/index.js",
   "files": [
     "lib"
