@@ -9,8 +9,5 @@ commander
   .parse(process.argv)
 
 getResults(commander.date)
-  .then(results => {
-    console.log(`Los resultados para '${commander.date}' son:`)
-    console.log(results)
-  })
+  .then(results => console.log(results))
   .catch(error => console.error(error))
