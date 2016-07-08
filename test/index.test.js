@@ -17,7 +17,7 @@ test('check invalid date parameter', (assert) => {
 
   getResults(today)
     .catch(error => {
-      assert.equal(typeof error, 'object', 'error should be an object after an invalid date parameter')
+      assert.equal(typeof error, 'object', 'error should be an object')
       assert.end()
     })
 })
@@ -26,12 +26,12 @@ test('check network error (404)', (assert) => {
   let today = (new Date()).toISOString().substring(0, 10)
 
   nock('http://www.dejugadas.com/quinielas/datospizarra.php')
-    .get('*')
-    .reply(404)
+    .post('*')
+    .replyWithError()
 
   getResults(today)
     .catch(error => {
-      assert.equal(typeof error, 'object', 'error should be an object after a network error (404)')
+      assert.equal(typeof error, 'object', 'error should be an object')
       assert.end()
     })
 })
