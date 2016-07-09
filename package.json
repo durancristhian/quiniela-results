@@ -4,6 +4,7 @@
   "description": "Module to obtain the results of the argentinian lotery from a given date. It can be executed as a CLI or consumed as any other npm module.",
   "main": "lib/index.js",
   "files": [
+    "cli",
     "lib"
   ],
   "scripts": {
