@@ -3,6 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/quiniela-results.svg)](https://www.npmjs.com/package/quiniela-results)
 [![Travis branch](https://img.shields.io/travis/durancristhian/quiniela-results/master.svg?maxAge=2592000)](https://travis-ci.org/durancristhian/quiniela-results)
 [![codecov coverage](https://img.shields.io/codecov/c/github/durancristhian/quiniela-results.svg)](https://codecov.io/github/durancristhian/quiniela-results)
+[![Dependency Status](https://dependencyci.com/github/durancristhian/quiniela-results/badge)](https://dependencyci.com/github/durancristhian/quiniela-results)
 [![node](https://img.shields.io/node/v/quiniela-results.svg?maxAge=2592000)](https://www.npmjs.com/package/quiniela-results)
 
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
