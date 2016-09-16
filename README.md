@@ -13,7 +13,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?maxAge=2592000)](http://makeapullrequest.com)
 [![license](https://img.shields.io/github/license/durancristhian/quiniela-results.svg)](https://github.com/durancristhian/quiniela-results/blob/master/LICENSE)
 
-Module to obtain the results of the argentinian lotery from a given date. It can be executed as a CLI or consumed as any other npm module.
+:calendar: Module to obtain the results of the argentinian lotery from a given date. It can be executed as a CLI or consumed as any other npm module.
 
 ## Demo
 
