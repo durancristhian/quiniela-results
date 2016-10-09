@@ -5,7 +5,7 @@ const getResults = require('../lib')
 
 commander
   .usage('--date [DATE]')
-  .option('-d, --date [DATE]', `'YYYY-MM-DD' format required`) // eslint-disable-line quotes
+  .option('-d, --date [DATE]', `'YYYY-MM-DD' format required`)
   .parse(process.argv)
 
 getResults(commander.date)
