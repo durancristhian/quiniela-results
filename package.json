@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "files": [
     "bin",
-    "lib"
+    "lib",
+    "resources"
   ],
   "scripts": {
     "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
