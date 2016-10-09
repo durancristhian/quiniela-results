@@ -17,7 +17,7 @@
 
 ## Demo
 
-![quiniela-results](https://raw.githubusercontent.com/durancristhian/quiniela-results/master/images/quiniela-results-demo-1.gif)
+![quiniela-results](https://raw.githubusercontent.com/durancristhian/quiniela-results/master/images/quiniela-results-demo-2.gif)
 
 ## Instalation
 
