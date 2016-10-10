@@ -23,13 +23,13 @@
     "quiniela-results": "./bin/cli.js"
   },
   "dependencies": {
-    "cheerio": "^0.20.0",
-    "codecov": "^1.0.1",
+    "cheerio": "^0.22.0",
     "commander": "^2.9.0",
     "request": "^2.72.0",
     "validator": "^6.0.0"
   },
   "devDependencies": {
+    "codecov": "^1.0.1",
     "commitizen": "^2.8.6",
     "cz-conventional-changelog": "^1.1.6",
     "dependency-check": "^2.5.1",
