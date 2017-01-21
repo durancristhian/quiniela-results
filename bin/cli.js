@@ -9,5 +9,5 @@ commander
   .parse(process.argv)
 
 getResults(commander.date)
-  .then(results => console.log(results))
+  .then(results => console.log(JSON.stringify(results, null, 2)))
   .catch(error => console.error(error))
