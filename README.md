@@ -51,133 +51,408 @@ getResults('2016-10-08')
 3. It performs a reduce to get the results from the cheerio's parsed DOM.
 4. It returns the results as an object that looks like this:
 
-```javascript
-{ Nacional:
-   { laPrimera: { meaning: 'Lombrices', number: 1466 },
-     matutina: { meaning: 'Anteojos', number: 4295 },
-     vespertina: { meaning: 'Borracho', number: 8814 },
-     nocturna: { meaning: 'El cuchillo', number: 6441 },
-     rawName: 'Nacional' },
-  Provincia:
-   { laPrimera: { meaning: 'Las plantas', number: 9659 },
-     matutina: { meaning: 'Linterna', number: 6085 },
-     vespertina: { meaning: 'Madre e Hijo', number: 3052 },
-     nocturna: { meaning: 'Niño', number: 8002 },
-     rawName: 'Provincia' },
-  SantaFe:
-   { laPrimera: { meaning: 'Linterna', number: 3485 },
-     matutina: { meaning: 'Niño', number: 7902 },
-     vespertina: { meaning: 'Revolver', number: 807 },
-     nocturna: { meaning: 'Gente negra', number: 55574 },
-     rawName: 'Santa Fe' },
-  Montevideo:
-   { laPrimera: { meaning: '', number: '' },
-     matutina: { meaning: '', number: '' },
-     vespertina: { meaning: '', number: '' },
-     nocturna: { meaning: 'El Jorobado', number: 6157 },
-     rawName: 'Montevideo' },
-  EntreRios:
-   { laPrimera: { meaning: 'Muerto', number: 5147 },
-     matutina: { meaning: 'La virgen', number: 4260 },
-     vespertina: { meaning: 'La cama', number: 9404 },
-     nocturna: { meaning: 'Cocinero', number: 523 },
-     rawName: 'Entre Ríos' },
-  Mendoza:
-   { laPrimera: { meaning: '', number: '' },
-     matutina: { meaning: 'Las llamas', number: 9076 },
-     vespertina: { meaning: '', number: '' },
-     nocturna: { meaning: 'Vicios', number: 2669 },
-     rawName: 'Mendoza' },
-  Cordoba:
-   { laPrimera: { meaning: 'Zapatillas', number: 7842 },
-     matutina: { meaning: 'El Cerro', number: 1328 },
-     vespertina: { meaning: 'La Cabeza', number: 3134 },
-     nocturna: { meaning: 'Madre e Hijo', number: 1152 },
-     rawName: 'Córdoba' },
-  Corrientes:
-   { laPrimera: { meaning: 'San Pedro', number: 2129 },
-     matutina: { meaning: 'Mal tiempo', number: 9183 },
-     vespertina: { meaning: 'La yeta', number: 7813 },
-     nocturna: { meaning: 'La caída', number: 1756 },
-     rawName: 'Corrientes' },
-  Chaco:
-   { laPrimera: { meaning: 'La caída', number: 7056 },
-     matutina: { meaning: 'Castaña', number: 3736 },
-     vespertina: { meaning: 'La Misa', number: 3026 },
-     nocturna: { meaning: 'Muerto', number: 8647 },
-     rawName: 'Chaco' },
-  Santiago:
-   { laPrimera: { meaning: '', number: '' },
-     matutina: { meaning: 'Gente negra', number: 9374 },
-     vespertina: { meaning: 'Gente negra', number: 7674 },
-     nocturna: { meaning: 'El cazador', number: 165 },
-     rawName: 'Santiago' },
-  Neuquen:
-   { laPrimera: { meaning: 'La Luz', number: 6631 },
-     matutina: { meaning: 'Gente negra', number: 8174 },
-     vespertina: { meaning: 'Pescado', number: 1819 },
-     nocturna: { meaning: 'La caída', number: 1756 },
-     rawName: 'Neuquén' },
-  SanLuis:
-   { laPrimera: { meaning: 'La pelea', number: 1682 },
-     matutina: { meaning: 'Las plantas', number: 5259 },
-     vespertina: { meaning: 'La caída', number: 7956 },
-     nocturna: { meaning: 'Huevos', number: 5500 },
-     rawName: 'San Luis' },
-  Salta:
-   { laPrimera: { meaning: 'Revolver', number: 7007 },
-     matutina: { meaning: 'Pescado', number: 3919 },
-     vespertina: { meaning: '', number: '' },
-     nocturna: { meaning: 'La música', number: 7555 },
-     rawName: 'Salta' },
-  Jujuy:
-   { laPrimera: { meaning: 'Niña Bonita', number: 4615 },
-     matutina: { meaning: 'El pan', number: 7050 },
-     vespertina: { meaning: '', number: '' },
-     nocturna: { meaning: 'Muerto', number: 9947 },
-     rawName: 'Jujuy' },
-  Tucuman:
-   { laPrimera: { meaning: 'La caída', number: 1156 },
-     matutina: { meaning: 'Madre e Hijo', number: 4752 },
-     vespertina: { meaning: '', number: '' },
-     nocturna: { meaning: 'Ramera', number: 2378 },
-     rawName: 'Tucumán' },
-  Chubut:
-   { laPrimera: { meaning: 'Niña Bonita', number: 3015 },
-     matutina: { meaning: 'San Cono', number: 9303 },
-     vespertina: { meaning: 'Serrucho', number: 1251 },
-     nocturna: { meaning: 'Gente negra', number: 1874 },
-     rawName: 'Chubut' },
-  Formosa:
-   { laPrimera: { meaning: 'Soldado', number: 6412 },
-     matutina: { meaning: 'Castaña', number: 9636 },
-     vespertina: { meaning: '', number: '' },
-     nocturna: { meaning: 'La cama', number: 9704 },
-     rawName: 'Formosa' },
-  Misiones:
-   { laPrimera: { meaning: 'Perro', number: 8706 },
-     matutina: { meaning: 'Hospital', number: 2373 },
-     vespertina: { meaning: '', number: '' },
-     nocturna: { meaning: 'La cama', number: 504 },
-     rawName: 'Misiones' },
-  Catamarca:
-   { laPrimera: { meaning: 'Desgracia', number: 17 },
-     matutina: { meaning: 'Desgracia', number: 2717 },
-     vespertina: { meaning: '', number: '' },
-     nocturna: { meaning: 'El cuchillo', number: 8341 },
-     rawName: 'Catamarca' },
-  SanJuan:
-   { laPrimera: { meaning: '', number: '' },
-     matutina: { meaning: 'El cazador', number: 4065 },
-     vespertina: { meaning: '', number: '' },
-     nocturna: { meaning: 'Las plantas', number: 3659 },
-     rawName: 'San Juan' },
-  LaRioja:
-   { laPrimera: { meaning: '', number: '' },
-     matutina: { meaning: '', number: '' },
-     vespertina: { meaning: '', number: '' },
-     nocturna: { meaning: '', number: '' },
-     rawName: 'La Rioja' } }
+```json
+{
+  "nacional": {
+    "laPrimera": {
+      "meaning": "Lombrices",
+      "number": 1466
+    },
+    "matutina": {
+      "meaning": "Anteojos",
+      "number": 4295
+    },
+    "vespertina": {
+      "meaning": "Borracho",
+      "number": 8814
+    },
+    "nocturna": {
+      "meaning": "El cuchillo",
+      "number": 6441
+    },
+    "rawName": "Nacional"
+  },
+  "provincia": {
+    "laPrimera": {
+      "meaning": "Las plantas",
+      "number": 9659
+    },
+    "matutina": {
+      "meaning": "Linterna",
+      "number": 6085
+    },
+    "vespertina": {
+      "meaning": "Madre e Hijo",
+      "number": 3052
+    },
+    "nocturna": {
+      "meaning": "Niño",
+      "number": 8002
+    },
+    "rawName": "Provincia"
+  },
+  "santafe": {
+    "laPrimera": {
+      "meaning": "Linterna",
+      "number": 3485
+    },
+    "matutina": {
+      "meaning": "Niño",
+      "number": 7902
+    },
+    "vespertina": {
+      "meaning": "Revolver",
+      "number": 807
+    },
+    "nocturna": {
+      "meaning": "Gente negra",
+      "number": 55574
+    },
+    "rawName": "Santa Fe"
+  },
+  "montevideo": {
+    "laPrimera": {
+      "meaning": "",
+      "number": ""
+    },
+    "matutina": {
+      "meaning": "",
+      "number": ""
+    },
+    "vespertina": {
+      "meaning": "",
+      "number": ""
+    },
+    "nocturna": {
+      "meaning": "El Jorobado",
+      "number": 6157
+    },
+    "rawName": "Montevideo"
+  },
+  "entrerios": {
+    "laPrimera": {
+      "meaning": "Muerto",
+      "number": 5147
+    },
+    "matutina": {
+      "meaning": "La virgen",
+      "number": 4260
+    },
+    "vespertina": {
+      "meaning": "La cama",
+      "number": 9404
+    },
+    "nocturna": {
+      "meaning": "Cocinero",
+      "number": 523
+    },
+    "rawName": "Entre Ríos"
+  },
+  "mendoza": {
+    "laPrimera": {
+      "meaning": "",
+      "number": ""
+    },
+    "matutina": {
+      "meaning": "Las llamas",
+      "number": 9076
+    },
+    "vespertina": {
+      "meaning": "",
+      "number": ""
+    },
+    "nocturna": {
+      "meaning": "Vicios",
+      "number": 2669
+    },
+    "rawName": "Mendoza"
+  },
+  "cordoba": {
+    "laPrimera": {
+      "meaning": "Zapatillas",
+      "number": 7842
+    },
+    "matutina": {
+      "meaning": "El Cerro",
+      "number": 1328
+    },
+    "vespertina": {
+      "meaning": "La Cabeza",
+      "number": 3134
+    },
+    "nocturna": {
+      "meaning": "Madre e Hijo",
+      "number": 1152
+    },
+    "rawName": "Córdoba"
+  },
+  "corrientes": {
+    "laPrimera": {
+      "meaning": "San Pedro",
+      "number": 2129
+    },
+    "matutina": {
+      "meaning": "Mal tiempo",
+      "number": 9183
+    },
+    "vespertina": {
+      "meaning": "La yeta",
+      "number": 7813
+    },
+    "nocturna": {
+      "meaning": "La caída",
+      "number": 1756
+    },
+    "rawName": "Corrientes"
+  },
+  "chaco": {
+    "laPrimera": {
+      "meaning": "La caída",
+      "number": 7056
+    },
+    "matutina": {
+      "meaning": "Castaña",
+      "number": 3736
+    },
+    "vespertina": {
+      "meaning": "La Misa",
+      "number": 3026
+    },
+    "nocturna": {
+      "meaning": "Muerto",
+      "number": 8647
+    },
+    "rawName": "Chaco"
+  },
+  "santiago": {
+    "laPrimera": {
+      "meaning": "",
+      "number": ""
+    },
+    "matutina": {
+      "meaning": "Gente negra",
+      "number": 9374
+    },
+    "vespertina": {
+      "meaning": "Gente negra",
+      "number": 7674
+    },
+    "nocturna": {
+      "meaning": "El cazador",
+      "number": 165
+    },
+    "rawName": "Santiago"
+  },
+  "neuquen": {
+    "laPrimera": {
+      "meaning": "La Luz",
+      "number": 6631
+    },
+    "matutina": {
+      "meaning": "Gente negra",
+      "number": 8174
+    },
+    "vespertina": {
+      "meaning": "Pescado",
+      "number": 1819
+    },
+    "nocturna": {
+      "meaning": "La caída",
+      "number": 1756
+    },
+    "rawName": "Neuquén"
+  },
+  "sanluis": {
+    "laPrimera": {
+      "meaning": "La pelea",
+      "number": 1682
+    },
+    "matutina": {
+      "meaning": "Las plantas",
+      "number": 5259
+    },
+    "vespertina": {
+      "meaning": "La caída",
+      "number": 7956
+    },
+    "nocturna": {
+      "meaning": "Huevos",
+      "number": 5500
+    },
+    "rawName": "San Luis"
+  },
+  "salta": {
+    "laPrimera": {
+      "meaning": "Revolver",
+      "number": 7007
+    },
+    "matutina": {
+      "meaning": "Pescado",
+      "number": 3919
+    },
+    "vespertina": {
+      "meaning": "",
+      "number": ""
+    },
+    "nocturna": {
+      "meaning": "La música",
+      "number": 7555
+    },
+    "rawName": "Salta"
+  },
+  "jujuy": {
+    "laPrimera": {
+      "meaning": "Niña Bonita",
+      "number": 4615
+    },
+    "matutina": {
+      "meaning": "El pan",
+      "number": 7050
+    },
+    "vespertina": {
+      "meaning": "",
+      "number": ""
+    },
+    "nocturna": {
+      "meaning": "Muerto",
+      "number": 9947
+    },
+    "rawName": "Jujuy"
+  },
+  "tucuman": {
+    "laPrimera": {
+      "meaning": "La caída",
+      "number": 1156
+    },
+    "matutina": {
+      "meaning": "Madre e Hijo",
+      "number": 4752
+    },
+    "vespertina": {
+      "meaning": "",
+      "number": ""
+    },
+    "nocturna": {
+      "meaning": "Ramera",
+      "number": 2378
+    },
+    "rawName": "Tucumán"
+  },
+  "chubut": {
+    "laPrimera": {
+      "meaning": "Niña Bonita",
+      "number": 3015
+    },
+    "matutina": {
+      "meaning": "San Cono",
+      "number": 9303
+    },
+    "vespertina": {
+      "meaning": "Serrucho",
+      "number": 1251
+    },
+    "nocturna": {
+      "meaning": "Gente negra",
+      "number": 1874
+    },
+    "rawName": "Chubut"
+  },
+  "formosa": {
+    "laPrimera": {
+      "meaning": "Soldado",
+      "number": 6412
+    },
+    "matutina": {
+      "meaning": "Castaña",
+      "number": 9636
+    },
+    "vespertina": {
+      "meaning": "",
+      "number": ""
+    },
+    "nocturna": {
+      "meaning": "La cama",
+      "number": 9704
+    },
+    "rawName": "Formosa"
+  },
+  "misiones": {
+    "laPrimera": {
+      "meaning": "Perro",
+      "number": 8706
+    },
+    "matutina": {
+      "meaning": "Hospital",
+      "number": 2373
+    },
+    "vespertina": {
+      "meaning": "",
+      "number": ""
+    },
+    "nocturna": {
+      "meaning": "La cama",
+      "number": 504
+    },
+    "rawName": "Misiones"
+  },
+  "catamarca": {
+    "laPrimera": {
+      "meaning": "Desgracia",
+      "number": 17
+    },
+    "matutina": {
+      "meaning": "Desgracia",
+      "number": 2717
+    },
+    "vespertina": {
+      "meaning": "",
+      "number": ""
+    },
+    "nocturna": {
+      "meaning": "El cuchillo",
+      "number": 8341
+    },
+    "rawName": "Catamarca"
+  },
+  "sanjuan": {
+    "laPrimera": {
+      "meaning": "",
+      "number": ""
+    },
+    "matutina": {
+      "meaning": "El cazador",
+      "number": 4065
+    },
+    "vespertina": {
+      "meaning": "",
+      "number": ""
+    },
+    "nocturna": {
+      "meaning": "Las plantas",
+      "number": 3659
+    },
+    "rawName": "San Juan"
+  },
+  "larioja": {
+    "laPrimera": {
+      "meaning": "",
+      "number": ""
+    },
+    "matutina": {
+      "meaning": "",
+      "number": ""
+    },
+    "vespertina": {
+      "meaning": "",
+      "number": ""
+    },
+    "nocturna": {
+      "meaning": "",
+      "number": ""
+    },
+    "rawName": "La Rioja"
+  }
+}
 ```
 
 ## Contributing
