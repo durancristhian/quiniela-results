@@ -9,7 +9,7 @@
     "resources"
   ],
   "scripts": {
-    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 0 --lines 100",
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "check-vulnerable-dependencies": "nsp check",
     "commit": "git cz",
     "coverage": "istanbul cover -x test/**/*.test.js tape test/**/*.test.js",
