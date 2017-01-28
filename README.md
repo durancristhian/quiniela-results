@@ -16,10 +16,6 @@
 
 :calendar: Module to obtain the results of the argentinian lotery from a given date. It can be executed as a CLI or consumed as any other npm module.
 
-## Demo
-
-![quiniela-results](https://raw.githubusercontent.com/durancristhian/quiniela-results/master/images/quiniela-results-demo-2.gif)
-
 ## Instalation
 
 ```bash
