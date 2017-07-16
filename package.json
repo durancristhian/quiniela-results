@@ -34,7 +34,7 @@
     "commitizen": "^2.8.6",
     "cz-conventional-changelog": "^2.0.0",
     "dependency-check": "^2.5.1",
-    "husky": "^0.13.2",
+    "husky": "^0.14.0",
     "istanbul": "^0.4.3",
     "nock": "^9.0.2",
     "nsp": "^2.5.0",
