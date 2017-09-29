@@ -27,7 +27,7 @@
     "cheerio": "^1.0.0-rc.2",
     "commander": "^2.9.0",
     "request": "^2.72.0",
-    "validator": "^8.0.0"
+    "validator": "^9.0.0"
   },
   "devDependencies": {
     "codecov": "^2.0.1",
