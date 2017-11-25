@@ -45,7 +45,7 @@
     "tape": "^4.6.1"
   },
   "engines": {
-    "node": "6"
+    "node": "9"
   },
   "repository": {
     "type": "git",
